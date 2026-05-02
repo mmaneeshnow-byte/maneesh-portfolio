@@ -102,6 +102,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+    
+    // Check for saved theme preference or use system preference
+    const getCurrentTheme = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            return savedTheme;
+        }
+        
+        // Check system preference
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    
+    // Set theme on page load
+    const setTheme = (theme) => {
+        if (theme === 'dark') {
+            document.documentElement.classList.remove('light-mode');
+            themeIcon.textContent = '🌙';
+        } else {
+            document.documentElement.classList.add('light-mode');
+            themeIcon.textContent = '☀️';
+        }
+        localStorage.setItem('theme', theme);
+    };
+    
+    // Initialize theme
+    const currentTheme = getCurrentTheme();
+    setTheme(currentTheme);
+    
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+        const newTheme = document.documentElement.classList.contains('light-mode') ? 'dark' : 'light';
+        setTheme(newTheme);
+    });
+    
     // Active section tracking on scroll
     const sections = document.querySelectorAll('section[id]');
     

@@ -1,5 +1,5 @@
 :root {
-    /* Nord Color Palette */
+    /* Dark Mode (Nord) Color Palette */
     --nord-bg: #2E3440;
     --nord-fg: #D8DEE9;
     --nord-frost: #88C0D0;
@@ -8,6 +8,18 @@
     --glass-bg: rgba(46, 52, 64, 0.7);
     --glass-border: rgba(136, 192, 208, 0.2);
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Light Mode Color Palette */
+.light-mode {
+    --nord-bg: #ECEFF4;
+    --nord-fg: #2E3440;
+    --nord-frost: #5E81AC;
+    --nord-gold: #D08770;
+    --nord-shadow: rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(236, 239, 244, 0.7);
+    --glass-border: rgba(94, 129, 172, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation Bar */
@@ -93,6 +105,29 @@
     background-color: var(--nord-fg);
     border-radius: 2px;
     transition: all 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--nord-fg);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    backdrop-filter: blur(5px);
+}
+
+.theme-toggle:hover {
+    background: var(--nord-frost);
+    color: var(--nord-bg);
+    transform: scale(1.1);
 }
 
 /* Base Styles */
