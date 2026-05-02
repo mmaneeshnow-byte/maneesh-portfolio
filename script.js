@@ -67,6 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
     
+    // Add same animation to about images
+    const aboutImages = document.querySelectorAll('.image-placeholder');
+    aboutImages.forEach(image => {
+        observer.observe(image);
+    });
+    
     // Add same animation to contact section
     const contactSection = document.getElementById('contact');
     observer.observe(contactSection);

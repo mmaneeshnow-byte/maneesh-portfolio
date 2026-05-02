@@ -103,9 +103,46 @@ h1 {
 .about-text {
     font-size: 1.2rem;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 2.5rem;
     text-align: center;
     line-height: 1.8;
+}
+
+.about-images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.image-placeholder {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 200px;
+    text-align: center;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--glass-shadow);
+}
+
+.image-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: var(--nord-frost);
+}
+
+.image-content {
+    margin-bottom: 1rem;
+}
+
+.image-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--nord-frost);
+    font-weight: 500;
 }
 
 /* Skills Grid */
@@ -188,6 +225,75 @@ h1 {
     font-size: 1.05rem;
     line-height: 1.7;
     color: #E5E9F0;
+}
+
+/* About Images Styling */
+.about-images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+.image-placeholder {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 200px;
+    text-align: center;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--glass-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: var(--nord-frost);
+}
+
+.image-content {
+    margin-bottom: 1rem;
+}
+
+.image-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--nord-frost);
+    font-weight: 500;
+}
+
+/* Project Images Styling */
+.project-image {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+    border-color: var(--nord-frost);
+    box-shadow: 0 8px 25px rgba(136, 192, 208, 0.3);
+}
+
+.project-image .image-content {
+    text-align: center;
+}
+
+.project-image .image-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--nord-frost);
+    margin-top: 0.75rem;
+    display: block;
 }
 
 /* Projects Grid */
