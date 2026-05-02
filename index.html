@@ -4,47 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maneesh - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="particles-js"></div>
     <header>
         <div class="container">
-            <h1>Maneesh</h1>
-            <p>Software Developer & Linux Enthusiast</p>
+            <div class="hero-content">
+                <div class="typing-effect">
+                    <span class="prompt">whoami:</span>
+                    <span class="cursor" id="cursor">|</span>
+                </div>
+                <h1>Maneesh</h1>
+                <p class="tagline">Software Developer & Linux Enthusiast</p>
+            </div>
         </div>
     </header>
 
     <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
-            <p>
-                Passionate software developer with expertise in Linux environments, 
-                particularly Hyprland and omarchy configurations. Experienced in 
-                creating efficient, customizable desktop experiences and developing 
-                robust software solutions.
+            <p class="about-text">
+                Passionate about crafting optimized Linux environments and developing robust software solutions. 
+                Specialized in Arch Linux, Hyprland tiling window manager, and Omarchy configurations for maximum productivity.
+                Experienced in creating dotfiles management systems and automation scripts that enhance developer workflows.
             </p>
         </div>
     </section>
 
     <section id="skills" class="section">
         <div class="container">
-            <h2>Skills</h2>
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3>Linux & System Administration</h3>
-                    <p>Arch Linux, Hyprland, Wayland, omarchy, bash scripting</p>
+                    <div class="tech-badges">
+                        <span class="badge">Arch Linux</span>
+                        <span class="badge">Wayland</span>
+                        <span class="badge">Hyprland</span>
+                        <span class="badge">Omarchy</span>
+                        <span class="badge">Bash</span>
+                        <span class="badge">Systemd</span>
+                    </div>
+                    <p class="skill-description">
+                        Deep expertise in Linux system administration, particularly Arch-based environments with 
+                        Hyprland window manager and custom Omarchy configurations for productive workflows.
+                    </p>
                 </div>
                 <div class="skill-card">
                     <h3>Programming Languages</h3>
-                    <p>Python, JavaScript, Bash, C/C++</p>
+                    <div class="tech-badges">
+                        <span class="badge">Python</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">C/C++</span>
+                        <span class="badge">Bash</span>
+                        <span class="badge">Rust</span>
+                        <span class="badge">Go</span>
+                    </div>
+                    <p class="skill-description">
+                        Proficient in multiple programming languages with focus on systems programming, 
+                        scripting, and application development across various paradigms.
+                    </p>
                 </div>
                 <div class="skill-card">
-                    <h3>Development Tools</h3>
-                    <p>Git, Docker, VS Code, Neovim, opencode</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Desktop Customization</h3>
-                    <p>Window managers, themes, keybindings, system optimization</p>
+                    <h3>Developer Tools</h3>
+                    <div class="tech-badges">
+                        <span class="badge">Git</span>
+                        <span class="badge">Docker</span>
+                        <span class="badge">Neovim</span>
+                        <span class="badge">VS Code</span>
+                        <span class="badge">tmux</span>
+                        <span class="badge">opencode</span>
+                    </div>
+                    <p class="skill-description">
+                        Expert in modern development tools and practices that enhance productivity and 
+                        maintain code quality in professional software development environments.
+                    </p>
                 </div>
             </div>
         </div>
@@ -52,46 +90,57 @@
 
     <section id="projects" class="section">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Omarchy Configuration</h3>
-                    <p>Custom Hyprland setup with personalized keybindings, 
-                       themes, and workflow optimizations for maximum productivity.</p>
-                    <a href="#" class="project-link">View Details</a>
+                    <div class="project-bg-pattern"></div>
+                    <p class="project-description">
+                        Custom Hyprland setup with personalized keybindings, themes, and workflow optimizations 
+                        built using the omarchy framework for a seamless Linux desktop experience.
+                    </p>
+                    <button class="btn-view">View Details</button>
                 </div>
                 <div class="project-card">
                     <h3>Dotfiles Repository</h3>
-                    <p>Managed configuration files for various Linux tools including 
-                       alacritty, kitty, waybar, and mako for consistent environments.</p>
-                    <a href="#" class="project-link">View Details</a>
+                    <div class="project-bg-pattern"></div>
+                    <p class="project-description">
+                        Comprehensive dotfiles management system for alacritty, kitty, waybar, mako, and 
+                        various CLI tools ensuring consistent environments across machines.
+                    </p>
+                    <button class="btn-view">View Details</button>
                 </div>
                 <div class="project-card">
                     <h3>System Automation Scripts</h3>
-                    <p>Bash scripts for automated system setup, backup procedures, 
-                       and maintenance tasks in Arch Linux environments.</p>
-                    <a href="#" class="project-link">View Details</a>
+                    <div class="project-bg-pattern"></div>
+                    <p class="project-description">
+                        Collection of Bash scripts for automated system setup, backup procedures, 
+                        maintenance tasks, and environment provisioning in Arch Linux.
+                    </p>
+                    <button class="btn-view">View Details</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <footer id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
-            <p>
-                Interested in collaborating or have questions? Feel free to reach out!
-            </p>
-            <div class="contact-info">
-                <p><strong>Email:</strong> maneesh@example.com</p>
-                <p><strong>Location:</strong> Based on Arch Linux with Hyprland</p>
+            <div class="contact-content">
+                <p class="contact-description">
+                    Interested in collaborating or have questions? Reach out via email.
+                </p>
+                <div class="contact-actions">
+                    <button id="emailBtn" class="btn-email">
+                        <span class="email-text">mmaneeshnow@example.com</span>
+                        <span class="copy-tooltip" id="copyTooltip">Copy to clipboard</span>
+                    </button>
+                    <div class="location-info">
+                        <span class="location-label">Environment:</span>
+                        <span class="location-value">Arch Linux • Hyprland • Omarchy</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Maneesh. All rights reserved.</p>
         </div>
     </footer>
 
