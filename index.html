@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maneesh - Portfolio</title>
+    <title>Maneesh - Full Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="particles-js"></div>
+    <div class="background-animation"></div>
+    
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <div class="nav-logo">Maneesh</div>
+                <a href="#home" class="nav-logo">
+                    <span class="logo-bracket"><</span>
+                    <span class="logo-text">M</span>
+                    <span class="logo-bracket">/></span>
+                </a>
                 <div class="nav-menu">
                     <a href="#home" class="nav-link active">Home</a>
                     <a href="#about" class="nav-link">About</a>
@@ -22,59 +28,175 @@
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode">
-                <span class="theme-icon">🌙</span>
-            </button>
+                <div class="nav-controls">
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
-    <header id="home">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="typing-effect">
-                    <span class="prompt">whoami:</span>
-                    <span class="cursor" id="cursor">|</span>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Available for work</span>
                 </div>
-                <h1>Maneesh</h1>
-                <p class="tagline">Software Developer & Linux Enthusiast</p>
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name">Maneesh</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </p>
+                <div class="hero-description">
+                    <p>Building exceptional digital experiences with clean code and modern technologies. Specialized in Linux systems, full-stack development, and creating seamless user interfaces.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">terminal</span>
+                    </div>
+                    <div class="window-content">
+                        <div class="code-line">
+                            <span class="prompt">$</span>
+                            <span class="command">whoami</span>
+                        </div>
+                        <div class="code-line output">maneesh</div>
+                        <div class="code-line">
+                            <span class="prompt">$</span>
+                            <span class="command">cat skills.json</span>
+                        </div>
+                        <div class="code-line output">
+                            <span class="json-key">"linux"</span>: <span class="json-string">"expert"</span>,
+                        </div>
+                        <div class="code-line output">
+                            <span class="json-key">"development"</span>: <span class="json-string">"passionate"</span>,
+                        </div>
+                        <div class="code-line output">
+                            <span class="json-key">"creativity"</span>: <span class="json-string">"unlimited"</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="prompt">$</span>
+                            <span class="cursor">_</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="about-content">
-                <p class="about-text">
-                    Passionate about crafting optimized Linux environments and developing robust software solutions. 
-                    Specialized in Arch Linux, Hyprland tiling window manager, and Omarchy configurations for maximum productivity.
-                    Experienced in creating dotfiles management systems and automation scripts that enhance developer workflows.
-                </p>
-                <div class="about-images">
-                    <div class="image-placeholder">
-                        <div class="image-content">
-                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="10" y="10" width="80" height="80" rx="12" fill="none" stroke="#88C0D0" stroke-width="2"/>
-                                <line x1="30" y1="20" x2="70" y2="80" stroke="#88C0D0" stroke-width="3"/>
-                                <line x1="70" y1="20" x2="30" y2="80" stroke="#88C0D0" stroke-width="3"/>
-                                <circle cx="50" cy="50" r="15" fill="#EBCB8B"/>
-                            </svg>
-                            <div class="image-label">Hyprland Configuration</div>
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a passionate software developer and Linux enthusiast who loves building things that live on the internet. My journey started with curiosity about how things work, which led me to dive deep into system administration and full-stack development.
+                    </p>
+                    <p class="about-detail">
+                        Currently focused on creating optimized Linux environments using Arch Linux, Hyprland, and custom configurations. I believe in the power of open-source software and contribute to various projects that make developers' lives easier.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🚀</div>
+                            <div class="highlight-text">
+                                <h4>Fast Learner</h4>
+                                <p>Quickly adapt to new technologies and frameworks</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💡</div>
+                            <div class="highlight-text">
+                                <h4>Problem Solver</h4>
+                                <p>Find creative solutions to complex challenges</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🤝</div>
+                            <div class="highlight-text">
+                                <h4>Team Player</h4>
+                                <p>Collaborate effectively with diverse teams</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="image-placeholder">
-                        <div class="image-content">
-                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="15" y="15" width="70" height="70" rx="8" fill="none" stroke="#88C0D0" stroke-width="2"/>
-                                <path d="M25,35 Q30,25 35,35 T45,35 Q50,25 55,35 T65,35 Q70,25 75,35" fill="none" stroke="#EBCB8B" stroke-width="3"/>
-                                <line x1="25" y1="65" x2="75" y2="65" stroke="#88C0D0" stroke-width="2"/>
-                            </svg>
-                            <div class="image-label">Code Snippets</div>
+                </div>
+                <div class="about-visual">
+                    <div class="tech-stack">
+                        <div class="tech-category">
+                            <h3>Linux & Systems</h3>
+                            <div class="tech-items">
+                                <span class="tech-item">Arch Linux</span>
+                                <span class="tech-item">Hyprland</span>
+                                <span class="tech-item">Wayland</span>
+                                <span class="tech-item">Bash</span>
+                                <span class="tech-item">Systemd</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <h3>Development</h3>
+                            <div class="tech-items">
+                                <span class="tech-item">Python</span>
+                                <span class="tech-item">JavaScript</span>
+                                <span class="tech-item">C/C++</span>
+                                <span class="tech-item">Rust</span>
+                                <span class="tech-item">Go</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <h3>Tools</h3>
+                            <div class="tech-items">
+                                <span class="tech-item">Git</span>
+                                <span class="tech-item">Docker</span>
+                                <span class="tech-item">Neovim</span>
+                                <span class="tech-item">VS Code</span>
+                                <span class="tech-item">tmux</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,161 +204,348 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <h2>Technical Skills</h2>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3>Linux & System Administration</h3>
-                    <div class="tech-badges">
-                        <span class="badge">Arch Linux</span>
-                        <span class="badge">Wayland</span>
-                        <span class="badge">Hyprland</span>
-                        <span class="badge">Omarchy</span>
-                        <span class="badge">Bash</span>
-                        <span class="badge">Systemd</span>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
                     </div>
-                    <p class="skill-description">
-                        Deep expertise in Linux system administration, particularly Arch-based environments with 
-                        Hyprland window manager and custom Omarchy configurations for productive workflows.
-                    </p>
+                    <h3 class="skill-title">Linux & DevOps</h3>
+                    <p class="skill-description">Expert in Linux system administration, containerization, and automation. Proficient with Arch Linux, Docker, and CI/CD pipelines.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Arch Linux</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Bash</span>
+                        <span class="tag">Git</span>
+                    </div>
                 </div>
                 <div class="skill-card">
-                    <h3>Programming Languages</h3>
-                    <div class="tech-badges">
-                        <span class="badge">Python</span>
-                        <span class="badge">JavaScript</span>
-                        <span class="badge">C/C++</span>
-                        <span class="badge">Bash</span>
-                        <span class="badge">Rust</span>
-                        <span class="badge">Go</span>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
                     </div>
-                    <p class="skill-description">
-                        Proficient in multiple programming languages with focus on systems programming, 
-                        scripting, and application development across various paradigms.
-                    </p>
+                    <h3 class="skill-title">Frontend Development</h3>
+                    <p class="skill-description">Building responsive and interactive user interfaces with modern frameworks and libraries. Focus on performance and accessibility.</p>
+                    <div class="skill-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">HTML5</span>
+                    </div>
                 </div>
                 <div class="skill-card">
-                    <h3>Developer Tools</h3>
-                    <div class="tech-badges">
-                        <span class="badge">Git</span>
-                        <span class="badge">Docker</span>
-                        <span class="badge">Neovim</span>
-                        <span class="badge">VS Code</span>
-                        <span class="badge">tmux</span>
-                        <span class="badge">opencode</span>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
                     </div>
-                    <p class="skill-description">
-                        Expert in modern development tools and practices that enhance productivity and 
-                        maintain code quality in professional software development environments.
-                    </p>
+                    <h3 class="skill-title">Backend Development</h3>
+                    <p class="skill-description">Developing robust server-side applications and APIs. Experience with various databases and backend frameworks.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">REST</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">System Programming</h3>
+                    <p class="skill-description">Low-level programming and system optimization. Working with C/C++ and Rust for performance-critical applications.</p>
+                    <div class="skill-tags">
+                        <span class="tag">C/C++</span>
+                        <span class="tag">Rust</span>
+                        <span class="tag">Go</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Security</h3>
+                    <p class="skill-description">Understanding security best practices and implementing secure coding. Experience with encryption and authentication.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">Encryption</span>
+                        <span class="tag">Auth</span>
+                        <span class="tag">Best Practices</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Open Source</h3>
+                    <p class="skill-description">Active contributor to open-source projects. Believer in collaborative development and knowledge sharing.</p>
+                    <div class="skill-tags">
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Contributions</span>
+                        <span class="tag">Community</span>
+                        <span class="tag">Documentation</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Omarchy Configuration</h3>
                     <div class="project-image">
-                        <div class="image-content">
-                            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Window layout inspired by Hyprland tiling -->
-                                <rect x="10" y="10" width="100" height="100" rx="8" fill="none" stroke="#88C0D0" stroke-width="2"/>
-                                <!-- Main large window -->
-                                <rect x="15" y="15" width="50" height="70" rx="4" fill="none" stroke="#EBCB8B" stroke-width="1.5"/>
-                                <!-- Stack of smaller windows -->
-                                <rect x="70" y="15" width="35" height="30" rx="3" fill="none" stroke="#EBCB8B" stroke-width="1.5"/>
-                                <rect x="70" y="50" width="35" height="35" rx="3" fill="none" stroke="#EBCB8B" stroke-width="1.5"/>
-                                <!-- Window decorations -->
-                                <rect x="15" y="10" width="50" height="5" fill="#88C0D0"/>
-                                <rect x="70" y="10" width="35" height="5" fill="#88C0D0"/>
-                                <rect x="70" y="45" width="35" height="5" fill="#88C0D0"/>
-                            </svg>
-                            <div class="image-label">Hyprland Tiling Layout</div>
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Hyprland</span>
+                                <span>Linux</span>
+                                <span>Config</span>
+                            </div>
+                        </div>
+                        <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+                            <rect width="400" height="300" fill="var(--nord-bg)"/>
+                            <rect x="20" y="20" width="180" height="260" rx="8" fill="var(--glass-bg)" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <rect x="200" y="20" width="180" height="120" rx="8" fill="var(--glass-bg)" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <rect x="200" y="160" width="180" height="120" rx="8" fill="var(--glass-bg)" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <rect x="20" y="15" width="180" height="10" fill="var(--nord-frost)"/>
+                            <rect x="200" y="15" width="180" height="10" fill="var(--nord-frost)"/>
+                            <rect x="200" y="155" width="180" height="10" fill="var(--nord-frost)"/>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Omarchy Configuration</h3>
+                        <p class="project-description">Custom Hyprland setup with personalized keybindings, themes, and workflow optimizations built using the omarchy framework for a seamless Linux desktop experience.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                <span>Live Demo</span>
+                            </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        Custom Hyprland setup with personalized keybindings, themes, and workflow optimizations 
-                        built using the omarchy framework for a seamless Linux desktop experience.
-                    </p>
-                    <button class="btn-view">View Details</button>
                 </div>
                 <div class="project-card">
-                    <h3>Dotfiles Repository</h3>
                     <div class="project-image">
-                        <div class="image-content">
-                            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Terminal-like representation -->
-                                <rect x="10" y="20" width="100" height="80" rx="8" fill="none" stroke="#88C0D0" stroke-width="2"/>
-                                <!-- Terminal header -->
-                                <rect x="10" y="20" width="100" height="20" fill="rgba(136, 192, 208, 0.1)">
-                                    <circle cx="20" cy="30" r="2.5" fill="#EBCB8B"/>
-                                    <circle cx="30" cy="30" r="2.5" fill="#EBCB8B"/>
-                                    <circle cx="40" cy="30" r="2.5" fill="#EBCB8B"/>
-                                </rect>
-                                <!-- Code lines -->
-                                <line x1="20" y1="40" x2="100" y2="40" stroke="#EBCB8B" stroke-width="1.5"/>
-                                <line x1="20" y1="55" x2="90" y2="55" stroke="#EBCB8B" stroke-width="1.5"/>
-                                <line x1="20" y1="70" x2="85" y2="70" stroke="#EBCB8B" stroke-width="1.5"/>
-                                <line x1="20" y1="85" x2="95" y2="85" stroke="#EBCB8B" stroke-width="1.5"/>
-                                <line x1="20" y1="100" x2="75" y2="100" stroke="#EBCB8B" stroke-width="1.5"/>
-                            </svg>
-                            <div class="image-label">Dotfiles Management</div>
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Dotfiles</span>
+                                <span>Config</span>
+                                <span>Automation</span>
+                            </div>
+                        </div>
+                        <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+                            <rect width="400" height="300" fill="var(--nord-bg)"/>
+                            <rect x="20" y="20" width="360" height="260" rx="8" fill="var(--glass-bg)" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <rect x="20" y="20" width="360" height="40" fill="var(--glass-bg)" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <circle cx="40" cy="40" r="6" fill="var(--nord-gold)"/>
+                            <circle cx="60" cy="40" r="6" fill="var(--nord-gold)"/>
+                            <circle cx="80" cy="40" r="6" fill="var(--nord-gold)"/>
+                            <line x1="40" y1="80" x2="360" y2="80" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <line x1="40" y1="110" x2="340" y2="110" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <line x1="40" y1="140" x2="350" y2="140" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <line x1="40" y1="170" x2="320" y2="170" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <line x1="40" y1="200" x2="360" y2="200" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <line x1="40" y1="230" x2="300" y2="230" stroke="var(--nord-frost)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dotfiles Repository</h3>
+                        <p class="project-description">Comprehensive dotfiles management system for alacritty, kitty, waybar, mako, and various CLI tools ensuring consistent environments across machines.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                <span>Live Demo</span>
+                            </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        Comprehensive dotfiles management system for alacritty, kitty, waybar, mako, and 
-                        various CLI tools ensuring consistent environments across machines.
-                    </p>
-                    <button class="btn-view">View Details</button>
                 </div>
                 <div class="project-card">
-                    <h3>System Automation Scripts</h3>
                     <div class="project-image">
-                        <div class="image-content">
-                            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Gear/cog representing automation -->
-                                <circle cx="60" cy="60" r="40" fill="none" stroke="#88C0D0" stroke-width="2"/>
-                                <path d="M60,20 L60,30 M90,60 L80,60 M60,100 L60,90 M30,60 L40,60" stroke="#EBCB8B" stroke-width="2"/>
-                                <path d="M42,42 L48,48 M72,72 L78,78 M42,78 L48,72 M72,42 L78,48" stroke="#EBCB8B" stroke-width="2"/>
-                                <!-- Terminal/bash representation -->
-                                <rect x="20" y="85" width="80" height="25" rx="4" fill="none" stroke="#EBCB8B" stroke-width="1.5"/>
-                                <text x="30" y="102" fill="#EBCB8B" font-size="8" font-family="JetBrains Mono">#!/bin/bash</text>
-                                <text x="30" y="110" fill="#EBCB8B" font-size="8" font-family="JetBrains Mono">echo "System Ready"</text>
-                            </svg>
-                            <div class="image-label">Automation & Scripting</div>
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Bash</span>
+                                <span>Automation</span>
+                                <span>Scripts</span>
+                            </div>
+                        </div>
+                        <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+                            <rect width="400" height="300" fill="var(--nord-bg)"/>
+                            <circle cx="200" cy="150" r="80" fill="none" stroke="var(--nord-frost)" stroke-width="3"/>
+                            <path d="M200 70 L200 90 M280 150 L260 150 M200 230 L200 210 M120 150 L140 150" stroke="var(--nord-gold)" stroke-width="3"/>
+                            <path d="M140 140 L160 160 M260 140 L240 160 M140 160 L160 140 M260 160 L240 140" stroke="var(--nord-gold)" stroke-width="3"/>
+                            <rect x="100" y="200" width="200" height="60" rx="8" fill="var(--glass-bg)" stroke="var(--nord-frost)" stroke-width="2"/>
+                            <text x="120" y="235" fill="var(--nord-gold)" font-size="16" font-family="JetBrains Mono">#!/bin/bash</text>
+                            <text x="120" y="255" fill="var(--nord-frost)" font-size="14" font-family="JetBrains Mono">echo "System Ready"</text>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">System Automation Scripts</h3>
+                        <p class="project-description">Collection of Bash scripts for automated system setup, backup procedures, maintenance tasks, and environment provisioning in Arch Linux.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                <span>Live Demo</span>
+                            </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        Collection of Bash scripts for automated system setup, backup procedures, 
-                        maintenance tasks, and environment provisioning in Arch Linux.
-                    </p>
-                    <button class="btn-view">View Details</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="section">
+    <!-- Contact Section -->
+    <section id="contact" class="section">
         <div class="container">
-            <h2>Contact</h2>
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="contact-content">
-                <p class="contact-description">
-                    Interested in collaborating or have questions? Reach out via email.
-                </p>
-                <div class="contact-actions">
-                    <button id="emailBtn" class="btn-email">
-                        <span class="email-text">mmaneeshnow@example.com</span>
-                        <span class="copy-tooltip" id="copyTooltip">Copy to clipboard</span>
-                    </button>
-                    <div class="location-info">
-                        <span class="location-label">Environment:</span>
-                        <span class="location-value">Arch Linux • Hyprland • Omarchy</span>
+                <div class="contact-text">
+                    <p class="contact-intro">
+                        I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:mmaneeshnow@example.com" class="contact-value">mmaneeshnow@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Arch Linux • Hyprland • Omarchy</span>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket"><</span>
+                    <span class="logo-text">M</span>
+                    <span class="logo-bracket">/></span>
+                </div>
+                <p class="footer-text">Built with passion and code. © 2026 Maneesh</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
